@@ -15,7 +15,7 @@ TEST(SubTest, evalPos)
 	Op* val1 = new Op(2.5);
 	Op* val2 = new Op(1.0);
 	Sub* test = new Sub(val1, val2);
-	EXPECT_DOUBLE_EQ(test->evaluate(),3.5);
+	EXPECT_DOUBLE_EQ(test->evaluate(),1.5);
 	delete val1;
 	delete val2;
 	delete test;
@@ -26,7 +26,7 @@ TEST(SubTest, evalNeg)
         Op* val1 = new Op(-2.5);
         Op* val2 = new Op(-1.0);
         Sub* test = new Sub(val1, val2);
-        EXPECT_DOUBLE_EQ(test->evaluate(),-3.5);
+        EXPECT_DOUBLE_EQ(test->evaluate(),-1.5);
 	delete val1;
 	delete val2;
 	delete test;

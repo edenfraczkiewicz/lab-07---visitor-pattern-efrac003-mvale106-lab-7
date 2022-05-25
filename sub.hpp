@@ -2,6 +2,10 @@
 #define SUB_HPP_
 
 #include "base.hpp"
+#include "op.hpp"
+#include "visitor.hpp"
+#include <iostream>
+#include <string>
 
 using namespace std;
 

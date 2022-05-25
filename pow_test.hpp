@@ -24,7 +24,8 @@ TEST(PowTest, noPower)
 	Base* val2 = NULL;
         Base* val1 = new Op(1.0);
         EXPECT_THROW(Pow(val1,val2),invalid_argument);
-	delete  val1;    
+	delete val1;
+	delete val2;
 }
 
 TEST(PowTest, noArgument)
@@ -32,6 +33,8 @@ TEST(PowTest, noArgument)
         Base* val2 = NULL;
         Base* val1 = NULL;
         EXPECT_THROW(Pow(val1,val2),invalid_argument);
+	delete val1;
+	delete val2;
 }
 
 TEST(PowTest, powEvalPos)

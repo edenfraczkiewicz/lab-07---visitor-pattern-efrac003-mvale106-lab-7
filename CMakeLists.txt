@@ -6,12 +6,6 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(test
     unit_test.cpp
-    iterator.cpp
-)
-
-ADD_EXECUTABLE(parser
-    main.cpp
-    iterator.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
