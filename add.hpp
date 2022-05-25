@@ -1,6 +1,11 @@
 #ifndef __ADD_HPP__
 #define __ADD_HPP__
+
 #include "base.hpp"
+#include "op.hpp"
+#include "visitor.hpp"
+#include <iostream>
+#include <string>
 
 class Add : public Base
 {
