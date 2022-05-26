@@ -31,12 +31,12 @@ class Pow : public Base
 			right = rhs;
 		}
 		
-		double evaluate() 
+		virtual double evaluate() 
 		{
 			return pow(left->evaluate(), right->evaluate());
 		}
 		
-		string stringify()
+		virtual std::string stringify()
 		{
 			return "(" + left->stringify() + "**" + right->stringify() + ")";
 		}
@@ -81,11 +81,6 @@ class Pow : public Base
 			{
 				visitor->visit_pow_end(this); 
 			}	
-		}
-		
-		virtual string print()
-		{
-			return "**";
 		}
 };
 

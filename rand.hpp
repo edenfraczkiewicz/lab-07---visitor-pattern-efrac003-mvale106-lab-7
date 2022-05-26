@@ -22,7 +22,7 @@ class Rand : public Base {
 		return numVal; 
 	}
 
-	virtual string stringify() {
+	virtual std::string stringify() {
 		 return strVal; 
 	}
 
@@ -36,10 +36,6 @@ class Rand : public Base {
 
 	void accept(Visitor* visitor, int index) {
 		visitor->visit_rand(this);
-	}
-
-	virtual string print(){
-		return stringify();
 	}
 		
   private:

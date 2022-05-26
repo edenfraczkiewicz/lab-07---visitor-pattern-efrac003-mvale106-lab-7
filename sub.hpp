@@ -21,12 +21,12 @@ class Sub : public Base
 			right = rhs;
 		}
 		
-		double evaluate() 
+		virtual double evaluate() 
 		{
 			return (left->evaluate() - right->evaluate());
 		}
 		
-		string stringify()
+		virtual std::string stringify()
 		{
 			return "(" + left->stringify() + "-" + right->stringify() + ")";
 		}
@@ -71,11 +71,6 @@ class Sub : public Base
 			{
 				visitor->visit_sub_end(this); 
 			}	
-		}
-		
-		virtual string print()
-		{
-			return "-";
 		}
 };
 

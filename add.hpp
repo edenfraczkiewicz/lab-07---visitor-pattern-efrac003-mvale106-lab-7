@@ -17,10 +17,10 @@ class Add : public Base
 			left = lhs;
 			right = rhs;
 		}
-		double evaluate() {
+		virtual double evaluate() {
 			return left->evaluate() + right->evaluate();
 		}
-		string stringify(){
+		virtual std::string stringify(){
 			return "(" + left->stringify() + "+" + right->stringify() + ")";
 		}
 		int number_of_children(){
@@ -52,9 +52,6 @@ class Add : public Base
 			else {
 				visitor->visit_add_end(this); 
 			}	
-		}
-		virtual string print(){
-			return "+";
 		}
 };
 
