@@ -19,7 +19,7 @@ class Op : public Base {
 		return val;
 	}
 
-        virtual string stringify() { 
+        virtual std::string stringify() { 
 		return to_string(val); 
 	}
 
@@ -33,10 +33,6 @@ class Op : public Base {
 
 	void accept(Visitor* visitor, int index) {
 		visitor->visit_op(this);
-	}
-
-	virtual string print() {
-		return stringify();
 	}
 
   private:

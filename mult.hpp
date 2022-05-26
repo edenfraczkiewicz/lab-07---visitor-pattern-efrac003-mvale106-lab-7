@@ -20,7 +20,7 @@ class Mult : public Base {
 		return (val1->evaluate() * val2->evaluate()); 
 	}
 
-	virtual string stringify() {
+	virtual std::string stringify() {
 		return ('(' + val1->stringify() + "*" + val2->stringify() + ')'); 
 	}
 

@@ -21,12 +21,12 @@ class Sub : public Base
 			right = rhs;
 		}
 		
-		double evaluate() 
+		virtual double evaluate() 
 		{
 			return (left->evaluate() - right->evaluate());
 		}
 		
-		string stringify()
+		virtual std::string stringify()
 		{
 			return "(" + left->stringify() + "-" + right->stringify() + ")";
 		}
