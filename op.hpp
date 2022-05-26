@@ -35,7 +35,7 @@ class Op : public Base {
 		visitor->visit_op(this);
 	}
 
-	virtual string print(){
+	virtual string print() {
 		return stringify();
 	}
 

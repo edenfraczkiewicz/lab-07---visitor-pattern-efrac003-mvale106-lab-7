@@ -62,10 +62,6 @@ class Mult : public Base {
 		}	
 	}
 
-	virtual string print() {
-		return "*";
-	}
-
     private:
         Base* val1;
         Base* val2;

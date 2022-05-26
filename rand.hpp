@@ -38,9 +38,9 @@ class Rand : public Base {
 		visitor->visit_rand(this);
 	}
 
-	virtual string print(){
-		return stringify();
-	}
+	virtual string print() {
+                return stringify();
+        }
 		
   private:
 	double numVal;

@@ -72,11 +72,6 @@ class Sub : public Base
 				visitor->visit_sub_end(this); 
 			}	
 		}
-		
-		virtual string print()
-		{
-			return "-";
-		}
 };
 
 #endif
