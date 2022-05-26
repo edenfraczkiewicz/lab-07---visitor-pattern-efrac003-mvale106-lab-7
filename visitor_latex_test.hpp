@@ -24,22 +24,20 @@ TEST(LaTeX, EmptyArray) {
 
 TEST(LaTeX, AllOperators) {
 	Base* num[10] = {new Op(0), new Op(1), new Op(2), new Op(3), new Op(4), new Op(5), new Op(6), new Op(7), new Op(8), new Op(9)};
-	Base* neg = new Op(-6);
-	Base* add = new Add(neg, num[12]);   
-	Base* sub = new Sub(num[8], add);      
-	Base* mult = new Mult(neg, sub);      
-	Base* div = new Div(mult, num[4]);   
-	Base* pow = new Pow(div, num[4]);
-	VisitorLaTeX* latex = new VisitorLaTeX();
+	Base* add = new Add(num[5], num[2]);
+	Base* sub = new Sub(add, num[4]);
+        Base* mult = new Mult(sub, num[3]);
+        Base* pow = new Pow(mult, num[2]);
+        Base* div = new Div(pow, mult);
+        VisitorLaTeX* latex = new VisitorLaTeX();
 
-	EXPECT_EQ(latex->PrintLaTeX(pow), "$((\\frac{({-6}\\cdot({8}-({-6}+{-6})))}{{-4})^{4})$\n");
-	delete latex;
-	delete neg;
+        EXPECT_EQ(latex->PrintLaTeX(div), "$(\\frac{(((({5.000000}+{2.000000})-{4.000000})\\cdot{3.000000})^{2.000000})}{((({5.000000}+{2.000000})-{4.000000})\\cdot{3.000000}))$\n");
+        delete latex;
 	delete add;
 	delete sub;
-	delete mult;
-	delete div;
-	delete pow;
+        delete mult;
+        delete pow;
+        delete div;
 }
 
 TEST(LaTeX, MultPowDiv) {
@@ -49,7 +47,7 @@ TEST(LaTeX, MultPowDiv) {
         Base* div = new Div(mult, pow);           
 	VisitorLaTeX* latex = new VisitorLaTeX();
 
-        EXPECT_EQ(latex->PrintLaTeX(div), "$(\\frac{({2}\\cdot{2})}{({2}^{2}))$\n");
+        EXPECT_EQ(latex->PrintLaTeX(div), "$(\\frac{({2.000000}\\cdot{2.000000})}{({2.000000}^{2.000000}))$\n");
     	delete latex;
 	delete mult;
 	delete pow;
@@ -62,7 +60,7 @@ TEST(LaTeX, SubAdd) {
         Base* add = new Add(num[0], sub);
 	VisitorLaTeX* latex = new VisitorLaTeX();
 
-	EXPECT_EQ(latex->PrintLaTeX(add), "$({0}+{8}-{0}))$\n");
+	EXPECT_EQ(latex->PrintLaTeX(add), "$({0.000000}+({8.000000}-{0.000000}))$\n");
 	delete latex;
 	delete sub;
 	delete add;
