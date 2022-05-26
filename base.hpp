@@ -1,6 +1,7 @@
 #ifndef __BASE_HPP__
 #define __BASE_HPP__
 
+#include "visitor.hpp"
 #include <string>
 
 class Base {
@@ -13,7 +14,7 @@ class Base {
         virtual int number_of_children() = 0;
         virtual Base* get_child(int i) = 0;
 	virtual void accept(Visitor* visitor, int index) = 0;
-	virtual string print() = 0;
+	virtual std::string print() = 0;
 };
 
 #endif //__BASE_HPP__
