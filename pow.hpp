@@ -2,10 +2,10 @@
 #define POW_HPP_
 
 #include "base.hpp"
-#include "op.hpp"
-#include "visitor.hpp"
-#include <iostream>
-#include <string>
+//#include "op.hpp"
+//#include "visitor.hpp"
+//#include <iostream>
+//#include <string>
 #include <stdexcept>
 #include <limits>
 #include <cmath>
@@ -19,11 +19,11 @@ class Pow : public Base
 	public:
 		Pow(Base* lhs, Base* rhs) : Base() 
 		{
-			if(left==nullptr || right == nullptr)
+			if(lhs==nullptr || rhs == nullptr)
 			{
 				throw std::invalid_argument("Null argument passed into Pow.");
 			}
-                        if(left->evaluate() < 0 && (right->evaluate()<1))
+                        if(lhs->evaluate() < 0 && (rhs->evaluate()<1))
 			{
 				throw std::invalid_argument("Imaginary number.");
 			}

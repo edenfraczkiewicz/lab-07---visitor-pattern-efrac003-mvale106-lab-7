@@ -78,7 +78,7 @@ TEST(PowTest, powEvalAddSub)
 	Add* sum = new Add(val1,val2);
 	Sub* sub = new Sub(sum,val3);
 	Base* test = new Pow(sub,val1);
-        EXPECT_EQ(test->evaluate(), 2.0);
+        EXPECT_EQ(test->evaluate(), 4.0);
 	delete val1;
 	delete val2;
 	delete val3;
