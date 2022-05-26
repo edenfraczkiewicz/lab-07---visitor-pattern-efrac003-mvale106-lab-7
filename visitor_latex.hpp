@@ -26,11 +26,11 @@ class VisitorLaTeX : public Visitor {
         }
 
 	virtual void visit_rand(Rand* node) {
-		print += "{" + node->print() + "}"; 
+		print += "{" + node->stringify() + "}"; 
 	}
 
         virtual void visit_op(Op* node) { 
-		print += "{" + node->print() + "}"; 
+		print += "{" + node->stringify() + "}"; 
 	}
         
 	virtual void visit_add_begin(Add* node) { 
