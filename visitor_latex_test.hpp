@@ -20,6 +20,9 @@ TEST(LaTeX, EmptyArray) {
 
 	EXPECT_EQ(latex->PrintLaTeX(num[0]), "${0.000000}$\n");
 	delete latex;
+	for(auto i: num) {
+                delete i;
+        }
 }
 
 TEST(LaTeX, AllOperators) {
@@ -38,6 +41,9 @@ TEST(LaTeX, AllOperators) {
         delete mult;
         delete pow;
         delete div;
+	for(auto i: num) {
+                delete i;
+        }
 }
 
 TEST(LaTeX, MultPowDiv) {
@@ -52,6 +58,9 @@ TEST(LaTeX, MultPowDiv) {
 	delete mult;
 	delete pow;
 	delete div;
+	for(auto i: num) {
+                delete i;
+        }
 }
 
 TEST(LaTeX, SubAdd) {
@@ -64,6 +73,9 @@ TEST(LaTeX, SubAdd) {
 	delete latex;
 	delete sub;
 	delete add;
+	for(auto i: num) {
+		delete i;
+	}
 }
 
 #endif
