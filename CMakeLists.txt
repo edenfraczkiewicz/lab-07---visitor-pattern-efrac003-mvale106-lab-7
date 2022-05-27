@@ -9,5 +9,10 @@ ADD_EXECUTABLE(test
 	iterator.cpp
 )
 
+ADD_EXECUTABLE(example
+	main.cpp
+	iterator.cpp
+)
+
 TARGET_LINK_LIBRARIES(test gtest)
 TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)

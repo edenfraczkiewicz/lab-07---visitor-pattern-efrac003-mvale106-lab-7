@@ -26,7 +26,8 @@ int main(){
 	cout << "------------------------------------------------" << endl;
 	cout << "EXAMPLE 1: (1+(5-0))" << endl;
 	cout << "Latex: " << latex->PrintLaTeX(add1a) << endl;
-	cout << "MathML: " << mathML->PrintMathML(add1a) << endl;
+	cout << "MathML: " << endl;
+	cout << mathML->PrintMathML(add1a) << endl;
 	cout << "------------------------------------------------" << endl;
 
 	//example 2:
@@ -37,7 +38,8 @@ int main(){
 
         cout << "EXAMPLE 2: (5^2)" << endl;
         cout << "Latex: " << latex->PrintLaTeX(pow2a) << endl;
-        cout << "MathML: " << mathML->PrintMathML(pow2a) << endl;
+        cout << "MathML: " << endl;
+	cout << mathML->PrintMathML(pow2a) << endl;
         cout << "------------------------------------------------" << endl;
 
 	//example 3:
@@ -48,7 +50,8 @@ int main(){
 
         cout << "EXAMPLE 3: (2*5)" << endl;
         cout << "Latex: " << latex->PrintLaTeX(mult3a) << endl;
-        cout << "MathML: " << mathML->PrintMathML(mult3a) << endl;
+        cout << "MathML: " << endl;
+	cout << mathML->PrintMathML(mult3a) << endl;
         cout << "------------------------------------------------" << endl;
 
 	//example 4:
@@ -59,7 +62,8 @@ int main(){
 
         cout << "EXAMPLE 4: (2/3)" << endl;
         cout << "Latex: " << latex->PrintLaTeX(div4a) << endl;
-        cout << "MathML: " << mathML->PrintMathML(div4a) << endl;
+        cout << "MathML: " << endl;
+	cout << mathML->PrintMathML(div4a) << endl;
         cout << "------------------------------------------------" << endl;
 	
 	//example 5:
@@ -70,7 +74,8 @@ int main(){
 
         cout << "EXAMPLE 5: (2*5)/(5^2)" << endl;
         cout << "Latex: " << latex->PrintLaTeX(div5a) << endl;
-        cout << "MathML: " << mathML->PrintMathML(div5a) << endl;
+        cout << "MathML: " << endl;
+	cout << mathML->PrintMathML(div5a) << endl;
         cout << "------------------------------------------------" << endl;
 
 
