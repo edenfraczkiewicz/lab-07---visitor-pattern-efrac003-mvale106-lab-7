@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/example.dir/main.cpp.o CMakeFiles/example.dir/iterator.cpp.o  -o example 
