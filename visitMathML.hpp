@@ -35,8 +35,8 @@ class VisitMathML : public Visitor
             		return print;
         	}
         	
-		virtual void visit_rand(Rand* node)        { print += repeat(indent) + "<cn>" + node->print() + "</cn>\n"; }
-        	virtual void visit_op(Op* node)            { print += repeat(indent) + "<cn>" + node->print() + "</cn>\n"; }
+		virtual void visit_rand(Rand* node)        { print += repeat(indent) + "<cn>" + node->removeTrail() + "</cn>\n"; }
+        	virtual void visit_op(Op* node)            { print += repeat(indent) + "<cn>" + node->removeTrail() + "</cn>\n"; }
         	virtual void visit_add_begin(Add* node)    { print += repeat(indent) + "<apply>\n"; ++indent; print += repeat(indent) + "<plus/>\n"  ; }
         	virtual void visit_sub_begin(Sub* node)    { print += repeat(indent) + "<apply>\n"; ++indent; print += repeat(indent) + "<minus/>\n" ; }       
         	virtual void visit_mult_begin(Mult* node)  { print += repeat(indent) + "<apply>\n"; ++indent; print += repeat(indent) + "<times/>\n" ; }       

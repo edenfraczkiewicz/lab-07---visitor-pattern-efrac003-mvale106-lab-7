@@ -7,6 +7,7 @@
 #include "sub_test.hpp"
 #include "pow_test.hpp"
 #include "visitor_latex_test.hpp"
+#include "visitMathML_test.hpp"
 
 int main(int argc, char **argv) {
 	::testing::InitGoogleTest(&argc, argv);

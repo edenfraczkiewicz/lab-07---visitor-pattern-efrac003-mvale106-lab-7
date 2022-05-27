@@ -20,7 +20,12 @@ class Op : public Base {
 	}
 
         virtual std::string stringify() { 
-		return to_string(val); 
+		return to_string(val);
+		//return removeZeroes(std::to_string(val)); 
+	}
+
+	virtual std::string removeTrail() {
+		return removeZeroes(std::to_string(val));
 	}
 
 	Base* get_child(int i) {
@@ -36,6 +41,13 @@ class Op : public Base {
 	}
 
   private:
+	std::string removeZeroes (const std::string& s)
+        {
+            std::string str = s;
+            str.erase ( str.find_last_not_of('0') + 1, std::string::npos ); 
+            str.erase ( str.find_last_not_of('.') + 1, std::string::npos );
+            return str;
+        }
         double val = 0;
 };
 
